@@ -17,18 +17,15 @@ export default function LoginPage() {
 
   return (
    <>
-    <div className="grid grid-cols-1 lg:py-[90px] mx-auto lg:grid-cols-2 ">
-      <div className='flex flex-col justify-center mx-auto max-w-md'>
+    <div className="grid grid-cols-1 lg:py-[120px] lg:px-[250px] py-6 mx-auto lg:grid-cols-2">
+      <div className='flex flex-col justify-center mx-auto mb-5 max-w-md'>
         <img className="h-[106px] lg:h-[106px] lg:w-[301px]" src="./Images/facebookLogo.svg" alt="Facebook Logo" />
-        <p className='text-2xl text-center mb-5 max-w-md mx-auto lg:text-left lg:ml-5'>Connect with friends and the world around you on Facebook.</p>
+        <p className='text-[24px] text-center max-w-lg mx-auto lg:text-[26px] lg:text-left lg:ml-5'> Connect with friends and the world around you on Facebook.
+        </p>
       </div>
       
-        
+       
         <div className="border-2 rounded-lg mx-auto p-5 w-[396px] bg-white shadow-lg">
-          <div>
-            <h1 className="text-md font-normal text-center mb-4">Log Into Facebook</h1>
-          </div>
-
           <form className="max-w-md space-y-4">
             <div className="mx-auto">
               <div className="relative">
@@ -84,13 +81,14 @@ export default function LoginPage() {
             </p>
 
             <div className="flex flex-row justify-center">
-                  <a href="/signup" className="bg-[#42b72a] hover:bg-[#1f9d20] text-[15px] p-3 w-1/2 text-white rounded font-bold">
+                  <a href="/signup" className="bg-[#42b72a] hover:bg-[#1f9d20] text-[15px] text-center p-3 w-1/2 h-3/4 text-white rounded font-bold">
                   Create new account
                   </a>
               </div>
           </form>
         </div>
      </div>
+   
 
     <footer className="flex justify-center bg-white fixed bottom-0 left-0 w-full h-20">
         <div className="flex flex-row justify-around items-center w-[265px]">
