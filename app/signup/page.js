@@ -9,37 +9,39 @@ const [custom, setCustom] = useState(false);
 
 
   return (
-    <>
-       <div>
-          <img src="Images/facebookLogo.svg"/>
-        <div>
+<>
+  <div className="flex flex-col justify-start align-center h-[950px]">
+      
+          <img className="h-[100px]" src="Images/facebookLogo.svg"/>
+        
 
-  <div class="flex flex-col max-w-md p-3 mx-auto bg-white rounded-lg shadow">
-          <p class="self-center text-2xl font-medium text-black sm:text-2xl ">
+    <div class="flex flex-col max-w-md mx-auto bg-white rounded-lg shadow">
+      <div class=" flex flex-col border-b text-gray-300 w-full">
+          <p class="self-center text-2xl pt-2 font-bold text-black sm:text-2xl ">
               Create a new account
           </p>
-          <p class="justify-center text-sm text-center text-gray-500 flex-items-center dark:text-gray-400">
-            It’s quick and easy.
+          <p class="justify-center text-sm pb-2 text-center text-[#606770] flex-items-center dark:text-gray-400">
+            It's quick and easy.
           </p>
-
-      <div class="p-6">
+        </div>  
+      <div class="p-6 ">
         <form action="#">
                 <div class="flex gap-4 col-2 mb-2">
                      <div>
-                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm"  placeholder="First name"/>
                       </div>
 
                       <div>
-                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" placeholder="Last Name"/>
                       </div>
                   </div>
 
                   <div className="mb-2">
-                      <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                      <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" placeholder="Mobile number or email"/>
                    </div>
 
                    <div>
-                      <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                      <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="New password"/>
                    </div>
 
                    <p className="mt-2 mb-1 text-sm text-[#606770]">Birthday</p>
@@ -118,12 +120,21 @@ const [custom, setCustom] = useState(false);
                     {custom && (
                     <div>
                       <div className="mb-2">
-                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                        <select
+                          id="create-account-first-name"
+                          className="rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black shadow-sm"
+                          name="First name"
+                        >
+                          <option disabled selected value="">Select your pronouns</option>
+                          <option value="option1">She: "Wish her a happy birthday!"</option>
+                          <option value="option2">He: "Wish him a happy birthday!"</option>
+                          <option value="option3">They: "Wish them a happy birthday!"</option>
+                        </select>
                       </div>
-                       <p className="text-sm mb-2">Your pronoun is visible to everyone.</p>
+                       <p className="text-[12px] mb-2 text-[#606770]">Your pronoun is visible to everyone.</p>
 
                       <div className="mb-2">
-                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="First name"/>
+                        <input type="text" id="create-account-first-name" class=" rounded-lg border border-[ccd0d4] w-full py-2 px-4 bg-white text-black  shadow-sm" name="First name" placeholder="Gender (optional)"/>
                      </div>
                     </div>
                     )}
@@ -134,16 +145,32 @@ const [custom, setCustom] = useState(false);
                       <p className="text-[11px]">By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
                     </div>
                     
-                    <div class="flex w-full my-4">
-                        <button type="submit" class="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                          Sign Up
-                        </button>
+                    <div class="flex flex-row justify-center w-full my-4 ">
+                    <button
+                      className="py-2 px-4 bg-[#00a400] text-white text-center text-[18px] font-bold shadow-md rounded-lg w-1/2 hover:bg-[#008c00]">
+                      Sign Up
+                    </button>
+                     </div>
+
+                     <div className="flex flex-row justify-center text-md">
+                        <a href="/" className="text-[#1877f2]">Already have an account?</a>
                      </div>
             </form>
           </div>
        </div>
+       
     </div>
-  </div>
+
+   
+    <footer className="flex justify-center bg-white w-full h-20 bottom-0 left-0">
+        <div className="flex flex-row justify-around items-center w-[265px]">
+          <a href="https://github.com/superxp360/facebook-login" className="m-5" target='_blank'>
+            <img className='h-8' src="Images/githubLogo.png" alt="No Show Password" />
+          </a>
+          <p className='m-2 text-gray-500'>See code on GitHub!</p>
+        </div>
+      </footer> 
+ 
     </>
   )
 }
