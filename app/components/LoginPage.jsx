@@ -30,7 +30,7 @@ export default function LoginPage() {
             <div className="mx-auto">
               <div className="relative">
                 <input
-                  type="email"
+                  type="text"
                   className="w-full h-[50px] rounded-lg border-gray-200 p-4 pe-12 text-lg shadow-sm border-[1.5px]"
                   placeholder="Email or phone number"
                 />
